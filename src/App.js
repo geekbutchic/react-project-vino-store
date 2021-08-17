@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Switch, Route } from 'react-router-dom'
 import Navbar from './components/Navbar.js/Navbar';
 import ProductList from './components/ProductList/ProductList';
 import WineDetails from './components/WineDetails/WineDetails';
@@ -11,14 +12,15 @@ export class App extends Component {
     return (
       <React.Fragment>
         <Navbar/>
-        <ProductList/>
-        <WineDetails/>
-        <Cart/>
-        <Default/>
-      <h1 className="text-white">HELLO FROM APP</h1>
+        <Switch>
+          <Route exact path="/" component={ProductList} />
+          <Route path="/details" component={WineDetails} />
+          <Route path="/cart" component={Cart} />
+          <Route component={Default} />
+        </Switch>
       </React.Fragment>
     )
-  }
+  } 
 }
 
 export default App

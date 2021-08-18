@@ -1,11 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Title  from '../Title/Title'
+
 
 export default class ProductList extends Component {
+    state = {
+        vino: []
+    }
     render() {
         return (
-            <div className="text-white">
-                <h1>HELLO FROM PRODUCT LIST</h1>
-            </div>
+            <React.Fragment>
+                <div className="p-5">
+                <div className="container"></div>
+                <Title name="WINE " title="SELECTION"/>
+                <div className="row"></div>
+                </div>
+            </React.Fragment>
+
         )
     }
 }

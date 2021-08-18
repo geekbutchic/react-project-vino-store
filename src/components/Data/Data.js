@@ -47,6 +47,20 @@ export const wineProducts =  [
         info:
         "Information about wine.  Name of wine.  What region. Tasting Notes. Additional information"
     }
-]
+];
 
-export default wineProducts;
+
+export const detailProduct = { 
+    id: 1,
+    title: "WINE DETAILS 1",
+    img: "",
+    region: "NEW ZEALAND, MARLBOROUGH",
+    price: 28,
+    info:
+    "A very detailed account of the wine.",
+    inCart: false,
+    count: 0,
+    total: 0,
+};
+
+export default wineProducts

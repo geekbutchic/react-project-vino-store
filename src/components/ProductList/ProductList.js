@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Title  from '../Title/Title'
-import { wineProducts } from '../WineDetails/WineDetails'
+import { wineProducts } from '../Data/Data'
+import { ProductConsumer } from '../../Context/Context'
 
 
 export default class ProductList extends Component {
@@ -14,7 +15,13 @@ export default class ProductList extends Component {
                 <div className="p-5">
                 <div className="container"></div>
                 <Title name="VINO " title="SELECTION"/>
-                <div className="row"></div>
+                <div className="row">
+                <ProductConsumer>
+                    {(value) => {
+                        return <h1>{value}</h1>
+                    }}
+                </ProductConsumer>
+                </div>
                 </div>
             </React.Fragment>
 

@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Title  from '../Title/Title'
+import { wineProducts } from '../WineDetails/WineDetails'
 
 
 export default class ProductList extends Component {
     state = {
-        vino: []
+        product: wineProducts
     }
     render() {
+        console.log(this.state.product);
         return (
             <React.Fragment>
                 <div className="p-5">

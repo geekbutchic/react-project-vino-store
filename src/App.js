@@ -6,8 +6,8 @@ import WineProducts from './components/Data/Data';
 import Cart from './components/Cart/Cart';
 import Default from './components/Default/Default';
 import './App.css'
-
-export class App extends Component {
+  
+class App extends Component {
   render() {
     return (
       <React.Fragment>
@@ -19,7 +19,7 @@ export class App extends Component {
           <Route component={Default} />
         </Switch>
       </React.Fragment>
-    )
+    );
   } 
 }
 
